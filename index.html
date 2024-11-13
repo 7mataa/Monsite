@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Notre Histoire d'Amour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Lien vers la police externe -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap">
+    <!-- Styles CSS -->
+    <style>
+        /* Styles globaux */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px 50px;
+            text-align: center;
+        }
+
+        /* Titre principal */
+        h1 {
+            font-size: 3em;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Soulignement animé sous le titre */
+        h1::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 4px;
+            background: #888888;
+            margin: 0 auto;
+            transition: width 0.5s;
+        }
+
+        h1:hover::after {
+            width: 100%;
+        }
+
+        /* Message romantique */
+        #message {
+            font-size: 1.5em;
+            color: #333333;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        /* Galerie d'images */
+        .gallery {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            border-radius: 15px; /* Bords arrondis */
+        }
+
+        .gallery img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            border-radius: 15px; /* Bords arrondis */
+        }
+
+        /* Texte principal */
+        .story-content {
+            max-width: 800px;
+            margin: 50px auto;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333333;
+            padding: 0 20px;
+            padding-bottom: 100px; /* Ajouté pour permettre le défilement */
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+        }
+
+        .story-content strong {
+            font-weight: bold;
+        }
+
+        .story-content em {
+            font-style: italic;
+        }
+
+        /* Styles pour les variations de taille de police */
+        .large-text {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .medium-text {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .small-text {
+            font-size: 1em;
+        }
+
+        /* Vidéo */
+        .video-container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            transform: translateY(20px);
+        }
+
+        .video-container video {
+            width: 80%; /* Réduit de 100% à 80% */
+            max-width: 600px; /* Limite la largeur maximale */
+            margin-bottom: 20px;
+            border-radius: 15px; /* Bords arrondis */
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            #message {
+                font-size: 1.2em;
+            }
+
+            .gallery {
+                height: 300px;
+            }
+
+            .story-content {
+                font-size: 1em;
+            }
+
+            .story-content .highlight {
+                font-size: 1.2em;
+            }
+
+            .video-container video {
+                width: 100%; /* Pour mobile, la vidéo prend la largeur du conteneur */
+            }
+        }
+
+        /* Ajustement pour iPhone 13 */
+        @media only screen and (max-width: 390px) {
+            .container {
+                padding: 60px 15px 40px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            #message {
+                font-size: 1.1em;
+            }
+
+            .gallery {
+                height: 250px;
+            }
+
+            .story-content {
+                font-size: 0.9em;
+                padding: 0 15px;
+            }
+
+            .story-content .highlight {
+                font-size: 1em;
+            }
+
+            .video-container video {
+                width: 100%; /* Pour iPhone 13, la vidéo prend la largeur du conteneur */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notre Belle Histoire</h1>
+        <p id="message">
+            Ces six derniers mois ont été une aventure incroyable à tes côtés. Chaque jour passé avec toi est un cadeau. Je t'aime infiniment.
+        </p>
+        <div class="gallery">
+            <!-- Vos images -->
+            <img src="images/image1.jpg" alt="Souvenir 1">
+            <img src="images/image2.jpeg" alt="Souvenir 2">
+            <img src="images/image3.jpeg" alt="Souvenir 3">
+            <img src="images/image4.jpeg" alt="Souvenir 4">
+            <img src="images/image5.jpeg" alt="Souvenir 5">
+            <img src="images/image6.jpeg" alt="Souvenir 6">
+            <img src="images/image7.jpg" alt="Souvenir 7">
+            <img src="images/image8.jpeg" alt="Souvenir 8">
+            <img src="images/image9.jpeg" alt="Souvenir 9">
+            <img src="images/image10.jpg" alt="Souvenir 10">
+            <img src="images/image11.jpeg" alt="Souvenir 11">
+            <img src="images/image12.jpg" alt="Souvenir 12">
+        </div>
+    </div>
+
+    <!-- Texte principal -->
+    <div class="story-content">
+        <!-- Votre texte corrigé et formaté -->
+        <!-- Assurez-vous de copier le texte complet ici -->
+        <p>
+            <strong class="highlight">Mai 2023</strong>, c’est là où tout commence, <span class="medium-text">notre rencontre</span>. Notre rencontre, on en a déjà parlé plein de fois mais elle était tellement étrange mais trop bien. C’est en mai 2023 que j’ai rencontré celle qui allait être <strong>l’amour de ma vie</strong>. On s’est directement bien entendus, et moi de mon côté, j’ai tellement eu ce sentiment de tout te donner pour que tu sois heureuse. Tu étais tellement gentille, c’est à partir de là qu’on a commencé à regarder des vidéos d’horreur ensemble de temps en temps. Après cette rencontre, pendant l’été, on se parlait beaucoup, on s’appelait quasiment tous les soirs pour regarder des vidéos de <strong>FELDUP</strong> hahaha. Je me rappelle que tu travaillais l’après-midi, tu finissais tard, tu rentrais et on s’appelait. On s’entendait tellement bien sur ça et <em>cet été était trop bien</em>. Ensuite, c’est aussi ce moment où on a commencé à se plaire mutuellement, genre <strong>ON SAVAITTTTT</strong> mais on était amis (ça voulait peut-être dire le début de quelque chose non ? haha ^^).
+        </p>
+        <p>
+            Je pense que ce qu’il y a à retenir de tout ça, c’est vraiment le fait qu’on était amis mais qu’on était aussi des <strong>safe places</strong> pour chacun. On faisait que rigoler, il n’y avait aucune prise de tête. Dis-toi, on s’est connus aussi sur <em>"c’est quoi ce bruit de golmon"</em> hahaha.
+        </p>
+        <p>
+            Depuis le début, je t’ai trouvée <strong>ultra intéressante</strong>, la première fois qu’on a eu une interaction, tu avais mis un documentaire sur l’espace. Du coup, je me suis dit : <em>"Mais wtf je kiffe trop !"</em> En plus, je jouais à Zelda à ce moment-là. Et au fur et à mesure des appels qu’on faisait, tu me posais plein de questions sur l’espace et j’adorais te répondre aussi.
+        </p>
+        <p>
+            On a évolué comme ça petit à petit jusqu’à <strong>février 2024</strong>. Même si on faisait notre vie de notre côté, on se donnait parfois un peu du temps pour refaire ce qu’on avait fait cet été, donc parler et regarder des vidéos. Et d’ailleurs, c’est tellement pour ça que les appels avec toi le soir c’est trop bien parce que c’est tellement quelque chose d’<strong>authentique</strong> et propre à nous. Ça nous appartient, on a gardé ça de notre amitié et j’aime tellement tout simplement.
+        </p>
+        <!-- Première vidéo -->
+        <div class="video-container">
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <p>
+            Le début de 2024 n’a pas été facile pour nous deux et encore plus pour toi. Tu étais vraiment <em>au bout de ta vie</em> après avoir vécu une séparation difficile et tout, et moi au même moment c’était un peu la même chose (de façons différentes bien sûr). Je t’ai vue toute triste même si tu n’en avais pas l’air sur le coup haha, mais j’ai directement voulu t’aider parce que tu as toujours été là, je me rappelais de quand on était amis, de nos moments ensemble etc. Avec tout ça, je voulais trop t’aider à aller mieux, déjà que tu prennes conscience de la personne que tu es, ensuite que tu oublies la mauvaise période que tu avais passée avant. Je voulais vraiment trop que tu sois heureuse chaque jour et que chaque jour aussi tu retrouves un peu plus confiance en toi.
+        </p>
+        <p>
+            Les semaines, même les mois passaient et on passait de plus en plus de temps ensemble. Je te voyais aussi de plus en plus heureuse, tu commençais très fortement à passer à autre chose, et petit à petit tu regagnais confiance en toi. Moi à ce moment-là je voyais tout ça et j’étais beaucoup trop heureux de voir que tu commençais à véritablement aller mieux. C’est aussi à ce moment-là que tu m’as fait découvrir <strong>SNK</strong>, tu me disais déjà de regarder mais là ALORS je me suis dit : <em>"Bon ok vas-y je regarde"</em> et j’ai découvert ce truc de <strong>FOU MALADE</strong>. Aujourd’hui, SNK ça me fait penser à toi parce que c’est quand même toi qui m’as apporté ça dans ma vie et c’était juste incroyable.
+        </p>
+        <p>
+            Plus le temps avançait, plus toi et moi on savait qu’on se voulait. Ma mère a déménagé, je suis parti chez ma grand-mère dans le but de trouver un travail pour te voir, tu travaillais toi aussi à ce moment, on a eu des boulots en même temps et on a fini ces mêmes boulots en même temps hahaha. Juste après ce moment je suis rentré chez mon père et quelques jours plus tard, c’était officiel, <strong class="large-text">ON AVAIT UNE DATE POUR SE VOIR</strong>. Je faisais que compter les jours qui restaient avant de te voir, on était tous les deux nerveux, on avait énormément envie de se voir mais aussi peur, on voulait bien faire les choses etc. Mais en fait, on était trop mignons haha.
+        </p>
+        <p>
+            <span class="highlight">15 mai 2024</span> : Ça fait tout juste un an pile qu’on se connaît, je ne dors pas de la nuit par stress de voir celle qui va être <strong>la femme de ma vie</strong>. C’est le <strong class="large-text">GRAND JOUR</strong>, tout est spécial parce que non seulement c’est le début de notre relation mais en plus c’est l’anniversaire de nos 1 an d’amitié. Je fais 5h33 de train, le stress monte petit à petit quand je suis à l’intérieur du train, je vois que mon train se rapproche de plus en plus de la gare d’Orléans. Il est 14h19 et mon train arrive à Orléans. Je sors du train, tout stressé, je marche, je ne connais rien à cet endroit, je suis perdu et je connais juste ton visage. On s’envoie des messages, et là, <strong class="large-text">on se voit</strong>.
+        </p>
+        <!-- Deuxième vidéo -->
+        <div class="video-container">
+            <video controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <p>
+            C’est la première fois que je te vois en vrai toute entière de A à Z. Vraiment, sur le moment je pense que je n’ai plus les mots parce que j’ai l’impression de voir un <strong>ange</strong> à ce moment-là. Mon cœur il bat à 500 mille, tu es tellement jolie, tu es tellement jolie que j’en suis impressionné. À ce moment-là j’ai découvert que tu étais encore plus belle dans la vraie vie parce que quand ton visage s’anime il devient encore plus beau. Tu m’as impressionné directement. Moi là, je suis grave désemparé, j’essaye de faire des blagues et on rigole nerveusement, en vrai je suis tellement heureux d’être avec toi à ce moment-là. Pour attendre Aurélie et qu’on se pose chez elle, on a dû faire passer le temps et du coup on est allés vers la Loire et on s’est posés sur ce banc. Et là, on sait très bien. Notre premier jour, première rencontre, une personne nous dit qu’on est beaux ensemble. Cette personne avait tellement raison, genre merci à lui d’avoir embelli encore plus notre journée. Là on ne pouvait pas douter de nous à ce moment-là, on va au-dessus du cinéma et on s’allonge dans l’herbe pendant plusieurs heures. On n’a pas vu le temps passer, c’était trop bien. Tous les gens autour de nous se sont effacés, ils n’existaient plus. Il n’y avait que toi et moi devant ce ciel. Juste après on va chez Aurélie, on mange notre premier <em>"Pelé Chicken"</em> ensemble, carrément je t’ai fait goûter ce fast-food. Avant que tu partes le soir, on se pose, tu es avec moi sur le canapé, on se regarde et on se rapproche de plus en plus. Et là, on fait notre <strong class="large-text">PREMIER BISOU</strong>. Incroyable, j’avais le cœur qui battait à mille à l’heure, toute cette journée avec toi était incroyable. J’ai découvert la vraie Maïssou pour la première fois de ma vie et c’était le plus beau moment de ma vie.
+        </p>
+        <!-- Troisième vidéo -->
+        <div class="video-container">
+            <video controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <p>
+            Je n’avais tellement pas envie de rentrer chez moi, on a fait que rallonger le séjour et les moments passés ensemble. J’étais tellement dans un nuage à ce moment-là. D’ailleurs je t’ai même offert mon tout premier cadeau que tu portes actuellement au poignet. Voilà le début de <strong>Maïssou et Matissou</strong>. Quel autre début aurions-nous voulu ? Aucun autre parce qu’il était parfait. Aussi parfait que la femme que je regarde avec mes yeux.
+        </p>
+        <p>
+            Maintenant ça fait 6 mois que ce jour a débuté, 6 mois que notre relation a commencé, 6 mois que nous sommes ensemble. 6 mois où on ne s’est pas beaucoup vus mais par contre on a fait des super vacances ensemble. Il y a toujours un de nous qui pleure car l’un de nous part à chaque fois qu’on se voit haha. Nos vacances à Bordeaux étaient <strong>incroyables</strong> et vraiment utiles pour nous.
+        </p>
+        <p>
+            Mes projets avec toi c’est déjà à l’avenir de te voir encore plus souvent, je veux aussi faire d’autres vacances avec toi rien que pour la connexion que ça nous apporte de se retrouver en lieu sain tous les deux. Le temps passe et je veux toujours passer plus de temps avec toi. Je veux évoluer dans la vie avec toi mon amour. Je souhaite que l’univers nous offre un appartement ensemble, une très bonne situation financière, et <strong>beaucoup beaucoup beaucoup d’amour</strong>. La chose aussi que je veux c’est que tu sois extrêmement libre et que tu aies le contrôle tout entier sur toi-même. Tu es une personne très aimante, je sais que tu m’aimes très très fort et j’ai extrêmement de chance pour ça. Tu es une femme qui s’intéresse à tout, qui s’ouvre à tout. Tu ne juges pas les autres au contraire tu fais preuve de respect. Tu es drôle, et enfin, tu es <strong>parfaite</strong>, physiquement, mentalement etc. Même si la vie n’a pas été facile avec toi aussi. Tu restes aussi forte et parfaite.
+        </p>
+        <p>
+            <strong class="large-text">Maïssou, je suis fier de toi et fier de nous.</strong> Il nous reste encore toute une vie devant nous. Je veux partager le restant de mes jours avec toi. Je veux t’aider le restant de ma vie. Et je veux t’aimer aussi pour l’éternité. Merci de vivre, merci d’être celle que tu es.
+        </p>
+        <p style="text-align: center; font-size: 2em; margin-top: 30px;">
+            Je t’aime ❤️
+        </p>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <!-- Inclure GSAP et ScrollTrigger depuis les CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Votre code JavaScript -->
+    <script>
+    // Enregistrer le plugin ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animation du titre
+    gsap.from('h1', {
+        duration: 1,
+        opacity: 0,
+        y: -50,
+        ease: 'power2.out'
+    });
+
+    // Animation du message
+    gsap.from('#message', {
+        duration: 1,
+        opacity: 0,
+        y: -50,
+        ease: 'power2.out',
+        delay: 0.5
+    });
+
+    // Animation de la galerie
+    gsap.from('.gallery', {
+        duration: 1,
+        opacity: 0,
+        y: -50,
+        ease: 'power2.out',
+        delay: 1
+    });
+
+    // Animation des images de la galerie
+    const images = document.querySelectorAll('.gallery img');
+    let currentIndex = 0;
+
+    // Rendre la première image visible
+    images[currentIndex].style.opacity = 1;
+
+    function showNextImage() {
+        images[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = 1;
+    }
+
+    setInterval(showNextImage, 5000);
+
+    // Animation du texte principal avec ScrollTrigger et délais ajustés
+    gsap.utils.toArray('.story-content p, .video-container').forEach((element, i) => {
+        gsap.from(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 90%',
+                toggleActions: 'play none none none',
+            },
+            duration: 0.8,
+            opacity: 0,
+            y: 30,
+            ease: 'power2.out',
+            delay: i * 0.1
+        });
+    });
+    </script>
+</body>
+</html>
